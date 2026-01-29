@@ -1,0 +1,276 @@
+:root{
+  --bg: #ffffff;
+  --card: rgba(255,255,255,.92);
+  --card2: rgba(255,255,255,.86);
+
+  --text: #0f172a;
+  --muted: rgba(15,23,42,.72);
+
+  --primary: #2563eb;
+  --primary2: #1d4ed8;
+
+  --border: rgba(15,23,42,.12);
+  --shadow: 0 18px 45px rgba(0,0,0,.18);
+
+  --radius: 18px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+.mainContainer{
+  min-height: 100vh;
+  padding: 110px 16px 56px;
+  background:
+    linear-gradient(180deg, rgba(5,10,20,.74), rgba(5,10,20,.78)),
+    url("image/paris.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* wrapper central */
+.poll{
+  width: min(980px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 28px;
+}
+
+/* sections (page1/page2) */
+.page1,
+.page2{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  backdrop-filter: blur(10px);
+}
+
+/* titres */
+.stitle{
+  margin: 0 0 16px 0;
+  text-align: center;
+  font-size: clamp(22px, 2.6vw, 34px);
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* sous-texte page2 */
+.page2 > p{
+  margin: 0 0 12px 0;
+  text-align: center;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* Form ant */
+.quiz{
+  width: 100%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* Labels un peu plus lisibles */
+.quiz .ant-form-item-label > label{
+  font-weight: 800;
+  color: rgba(15,23,42,.85);
+}
+
+/* Inputs clean */
+.quiz .ant-input,
+.quiz .ant-picker{
+  border-radius: 12px !important;
+  border: 1px solid rgba(15,23,42,.18) !important;
+  box-shadow: none !important;
+}
+
+.quiz .ant-input:focus,
+.quiz .ant-picker-focused{
+  border-color: rgba(37,99,235,.6) !important;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.15) !important;
+}
+
+/* Bouton "passer à la sélection" */
+.quiz .ant-btn-primary{
+  border-radius: 14px !important;
+  height: 44px !important;
+  padding: 0 18px !important;
+  font-weight: 900 !important;
+  border: none !important;
+  background: linear-gradient(135deg, var(--primary), var(--primary2)) !important;
+  box-shadow: 0 12px 26px rgba(37,99,235,.25) !important;
+}
+
+.quiz .ant-btn-primary:hover{
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+/* react-select : card + focus propre */
+.page2 .css-13cymwt-control,
+.page2 .css-t3ipsp-control{
+  border-radius: 14px !important;
+  border: 1px solid rgba(15,23,42,.18) !important;
+  min-height: 46px;
+  box-shadow: none !important;
+}
+
+.page2 .css-t3ipsp-control{
+  box-shadow: 0 0 0 3px rgba(37,99,235,.15) !important;
+  border-color: rgba(37,99,235,.6) !important;
+}
+
+/* menu */
+.page2 .css-1nmdiq5-menu{
+  border-radius: 14px !important;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,.22) !important;
+  border: 1px solid rgba(15,23,42,.12);
+}
+
+/* tags multi-select */
+.page2 .css-1p3m7a8-multiValue{
+  border-radius: 999px !important;
+  background: rgba(37,99,235,.12) !important;
+}
+.page2 .css-wsp0cs-MultiValueGeneric{
+  font-weight: 800;
+  color: rgba(15,23,42,.85) !important;
+}
+
+/* actions */
+.actions-sondage{
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+/* bouton valider */
+.b-valider{
+  border: none;
+  cursor: pointer;
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 14px;
+  font-weight: 900;
+  letter-spacing: .01em;
+  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--primary2));
+  box-shadow: 0 14px 30px rgba(37,99,235,.28);
+  transition: transform .15s ease, filter .15s ease, opacity .15s ease;
+}
+
+.b-valider:hover{ transform: translateY(-1px); filter: brightness(1.06); }
+.b-valider:active{ transform: translateY(0px); filter: brightness(1.0); }
+.b-valider:disabled{
+  cursor: not-allowed;
+  opacity: .55;
+  box-shadow: none;
+}
+
+/* feedback */
+.response{
+  margin: 0;
+  text-align: center;
+  font-weight: 900;
+}
+.response.success{ color: #166534; }
+.response.error{ color: #b91c1c; }
+
+/* ===== RésultatSondage : harmonisation ===== */
+.sondage-bg{
+  min-height: 100vh;
+  padding: 110px 16px 56px;
+  background:
+    linear-gradient(180deg, rgba(5,10,20,.74), rgba(5,10,20,.78)),
+    url("https://images.unsplash.com/photo-1543349689-9a4d426bee8e?auto=format&fit=crop&w=2000&q=60");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.sondage-wrap{
+  width: min(980px, 100%);
+  margin: 0 auto;
+  display: grid;
+  place-items: start center;
+}
+
+.sondage-card{
+  width: min(720px, 100%);
+  background: var(--card2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  backdrop-filter: blur(10px);
+}
+
+.sondage-card h3{
+  margin: 0 0 12px 0;
+  text-align: center;
+  color: var(--text);
+  font-size: clamp(22px, 2.2vw, 30px);
+  letter-spacing: -0.01em;
+}
+
+.bloc{
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(15,23,42,.10);
+  background: rgba(255,255,255,.82);
+}
+
+.bloc h2{
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.line{
+  margin: 8px 0;
+  color: rgba(15,23,42,.92);
+  line-height: 1.55;
+}
+
+.k{
+  font-weight: 900;
+  color: rgba(15,23,42,.75);
+}
+
+.loading{
+  text-align: center;
+  color: rgba(255,255,255,.85);
+  font-weight: 900;
+}
+
+.feedback{
+  text-align: center;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.feedback.error{
+  color: #fecaca;
+}
+
+/* responsive */
+@media (max-width: 720px){
+  .page1, .page2, .sondage-card{ padding: 16px; }
+  .mainContainer, .sondage-bg{ background-attachment: scroll; }
+}
+
+@media (max-width: 520px){
+  /* ant form : labels au-dessus */
+  .quiz .ant-form-item{
+    margin-bottom: 12px;
+  }
+}

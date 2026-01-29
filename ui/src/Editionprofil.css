@@ -1,0 +1,136 @@
+:root{
+  --secondaryColor: #4682B4;
+
+  --bgColor: #FBFCFC;
+  --textColor: #0f172a;
+
+  --muted: #6b7280;
+  --border: rgba(15, 23, 42, .10);
+  --shadow: 0 14px 30px rgba(0,0,0,.12);
+  --radius: 18px;
+}
+
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
+.edit-page{
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+  padding: clamp(28px, 4vw, 70px) 16px;
+  background: var(--bgColor);
+  color: var(--textColor);
+  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+}
+
+.edit-card{
+  width: min(640px, 95vw);
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.edit-head{
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.edit-head h3{
+  margin: 0 0 6px 0;
+  font-size: clamp(22px, 2.4vw, 32px);
+  letter-spacing: -0.02em;
+}
+
+.edit-head p{
+  margin: 0;
+  color: var(--muted);
+}
+
+.edit-form{
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.echamps{
+  height: 44px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, .12);
+  padding: 0 12px;
+  background: #f7f7f8;
+  outline: none;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.echamps:focus{
+  background: #fff;
+  border-color: rgba(70,130,180,.55);
+  box-shadow: 0 0 0 4px rgba(70,130,180,.18);
+}
+
+.btn-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.majbtn{
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  background: var(--secondaryColor);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.majbtn:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.majbtn:disabled{
+  opacity: .7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.abtn{
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, .14);
+  background: #fff;
+  color: var(--textColor);
+  font-weight: 800;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  transition: background .15s ease, transform .15s ease;
+}
+
+.abtn:hover{
+  background: rgba(15,23,42,.04);
+  transform: translateY(-1px);
+}
+
+/* feedback */
+.feedback{
+  margin: 6px 0 0 0;
+  text-align: center;
+  font-weight: 800;
+}
+
+.feedback.error{ color: #b91c1c; }
+.feedback.success{ color: #166534; }
+
+@media (max-width: 520px){
+  .btn-row{
+    grid-template-columns: 1fr;
+  }
+}

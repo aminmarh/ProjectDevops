@@ -1,0 +1,33 @@
+:root{
+  --bgColor: #FBFCFC;
+  --textColor: #0f172a;
+  --secondaryColor: #4682B4;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  background: var(--bgColor);
+  color: var(--textColor);
+  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+a{
+  color: inherit;
+}

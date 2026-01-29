@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.da163831.css",
+    "main.js": "/static/js/main.9f225163.js",
+    "static/js/488.2752d63d.chunk.js": "/static/js/488.2752d63d.chunk.js",
+    "static/media/mobilite.jpg": "/static/media/mobilite.dea8159125a88b3bfaf9.jpg",
+    "static/media/velo.jpg": "/static/media/velo.18974a0b4d7efe7c5820.jpg",
+    "static/media/metro.jpg": "/static/media/metro.cbc66331ef1dc6afc845.jpg",
+    "static/media/culture.jpg": "/static/media/culture.65542be10cbe8e92c288.jpg",
+    "static/media/logement.jpg": "/static/media/logement.adba69a9e65d92628439.jpg",
+    "static/media/paris.jpg": "/static/media/paris.f7fe8f144ebdf346cf21.jpg",
+    "static/media/bus.jpg": "/static/media/bus.f898c0f36154b5b3a672.jpg",
+    "static/media/avatar1.jpeg": "/static/media/avatar1.73db1592403661a47d9e.jpeg",
+    "static/media/avatar2.jpeg": "/static/media/avatar2.73db1592403661a47d9e.jpeg",
+    "static/media/avatar3.jpeg": "/static/media/avatar3.73db1592403661a47d9e.jpeg",
+    "static/media/default.jpeg": "/static/media/default.73db1592403661a47d9e.jpeg",
+    "static/media/logo-paris.png": "/static/media/logo-paris.818f13bca836aad79770.png",
+    "static/media/paris2024.jpg": "/static/media/paris2024.deb7a3a99a7c6f8a0606.jpg",
+    "index.html": "/index.html",
+    "main.da163831.css.map": "/static/css/main.da163831.css.map",
+    "main.9f225163.js.map": "/static/js/main.9f225163.js.map",
+    "488.2752d63d.chunk.js.map": "/static/js/488.2752d63d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da163831.css",
+    "static/js/main.9f225163.js"
+  ]
+}

@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ui-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: ville-de-paris.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ui-service
+            port:
+              number: 80
+  tls:
+  - hosts:
+      - ville-de-paris.local
+    secretName: tls-secret

@@ -1,0 +1,138 @@
+:root{
+  --bgColor: #FBFCFC;
+  --textColor: #0f172a;
+  --secondaryColor: #4682B4;
+
+  --muted: #6b7280;
+  --border: rgba(15,23,42,.10);
+  --shadow: 0 14px 30px rgba(0,0,0,.12);
+  --radius: 18px;
+}
+
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
+.profile-page{
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+  padding: clamp(28px, 4vw, 70px) 16px;
+  background: var(--bgColor);
+  color: var(--textColor);
+  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+}
+
+.profile-card{
+  width: min(720px, 95vw);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.nomprofil{
+  text-align: center;
+  margin: 0 0 18px 0;
+  font-size: clamp(22px, 2.4vw, 32px);
+  letter-spacing: -0.02em;
+}
+
+.profil{
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.profil-1{
+  display: grid;
+  place-items: center;
+}
+
+.sizeimg{
+  width: 170px;
+  height: 170px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid rgba(70,130,180,.35);
+}
+
+.profil-2{
+  display: grid;
+  gap: 10px;
+  text-align: left;
+}
+
+.row{
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  padding: 10px 12px;
+  border: 1px solid rgba(15,23,42,.08);
+  border-radius: 12px;
+  background: #f7f7f8;
+}
+
+.label{
+  font-weight: 900;
+  color: rgba(15,23,42,.75);
+  min-width: 70px;
+}
+
+.actions{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.action-btn{
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(15,23,42,.12);
+  background: #fff;
+  text-decoration: none;
+  color: var(--textColor);
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  transition: transform .15s ease, background .15s ease, color .15s ease;
+}
+
+.action-btn:hover{
+  transform: translateY(-1px);
+  background: rgba(15,23,42,.04);
+  color: var(--secondaryColor);
+}
+
+.action-btn.danger:hover{
+  color: #b91c1c;
+}
+
+.feedback{
+  text-align: center;
+  font-weight: 900;
+  margin: 0;
+}
+
+.feedback.error{
+  color: #b91c1c;
+}
+
+@media (max-width: 720px){
+  .profil{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .profil-2{
+    text-align: center;
+  }
+  .row{
+    justify-content: center;
+  }
+  .actions{
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,136 @@
+:root{
+  --mainColor: #bae1f5;
+  --secondaryColor: #4682B4;
+
+  --bgColor: #FBFCFC;
+  --textColor: #0f172a;
+
+  --muted: #6b7280;
+  --shadow: 0 14px 30px rgba(0,0,0,.12);
+  --radius: 18px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+.connexion{
+  min-height: calc(100vh - 80px);
+  padding: clamp(24px, 4vw, 60px);
+  display: grid;
+  place-items: center;
+  background: var(--bgColor);
+  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+}
+
+.boite{
+  width: min(420px, 92vw);
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 23, 42, .08);
+  text-align: center;
+}
+
+.boite h2{
+  margin: 0 0 18px 0;
+  color: var(--textColor);
+  letter-spacing: -0.01em;
+}
+
+form{
+  display: grid;
+  gap: 12px;
+}
+
+.champs{
+  height: 44px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, .12);
+  padding: 0 12px;
+  background: #f7f7f8;
+  outline: none;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.champs:focus{
+  background: #fff;
+  border-color: rgba(70,130,180,.55);
+  box-shadow: 0 0 0 4px rgba(70,130,180,.18);
+}
+
+.remember{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+#remembercheckbox{
+  width: 16px;
+  height: 16px;
+  accent-color: var(--secondaryColor);
+}
+
+.label{
+  color: var(--muted);
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+#btn{
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  background: var(--secondaryColor);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, filter .15s ease;
+}
+
+#btn:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+#btn:disabled{
+  opacity: .7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* feedback */
+.feedback{
+  margin: 4px 0 0 0;
+  font-size: .95rem;
+}
+
+.feedback.error{
+  color: #b91c1c;
+}
+
+.feedback.success{
+  color: #166534;
+}
+
+.btn-bas{
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.link-btn{
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--secondaryColor);
+}
+
+.link-btn:hover{
+  text-decoration: underline;
+}
