@@ -265,7 +265,7 @@ Cette section présente des **preuves visuelles** des labs réalisés par chaque
 
 ## Magnolia AMOUSSOU GUENOU – Labs réalisés
 
-![Labs Magnolia](screenshots/labs_magnolia.png)
+![Labs Magnolia](screenshots/Labs_Magnolia.png)
 
 ---
 
